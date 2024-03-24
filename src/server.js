@@ -2,9 +2,10 @@ import express from 'express';
 
 const app = express();
 
-app.get('/hello', (req, res) => {
+app.use(express.json());
 
-    res.send('Hello world!!!');
+app.post('/hello', (req, res) => {
+    res.send(`Hello ${req.body.name}`);
 });
 
 app.listen(8000, () => {
