@@ -1,4 +1,5 @@
 import express from 'express';
+
 import { connectToDb, db } from './db.js';
 
 const app = express();
@@ -58,6 +59,9 @@ connectToDb(() => {
 
 import express from 'express';
 
+=======
+
+>>>>>>> 43d4227e815c647eb95d0e37731be80898f29cc9
 import { connectToDb, db } from './db.js';
 
 const app = express();
@@ -67,6 +71,10 @@ app.use(express.json());
 app.get('/api/articles/:name', async (req, res) => {
     const { name } = req.params;
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 43d4227e815c647eb95d0e37731be80898f29cc9
 
     const article = await db.collection('articles').findOne({ name });//to use specific id
 
@@ -128,5 +136,6 @@ connectToDb(() => {
         console.log("Server is listening on port 8000");
     });
 })
+<<<<<<< HEAD
 
 */
